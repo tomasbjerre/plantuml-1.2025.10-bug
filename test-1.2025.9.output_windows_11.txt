@@ -1,0 +1,22 @@
+$ ./test-1.2025.9.sh
+Only d1:
+d1.plantuml  d3.plantuml             test-1.2025.10.output_windows_11.txt  test-1.2025.9.sh
+d1.png       plantuml-1.2025.10.jar  test-1.2025.10.sh
+d2.plantuml  plantuml-1.2025.9.jar   test-1.2025.9.output_windows_11.txt
+
+Only d2:
+d1.plantuml  d3.plantuml             test-1.2025.10.output_windows_11.txt  test-1.2025.9.sh
+d2.plantuml  plantuml-1.2025.10.jar  test-1.2025.10.sh
+d2.png       plantuml-1.2025.9.jar   test-1.2025.9.output_windows_11.txt
+
+All:
+d1.plantuml  d2.png       plantuml-1.2025.10.jar                test-1.2025.10.sh
+d1.png       d3.plantuml  plantuml-1.2025.9.jar                 test-1.2025.9.output_windows_11.txt
+d2.plantuml  d3.png       test-1.2025.10.output_windows_11.txt  test-1.2025.9.sh
+
+All twice:
+d1.plantuml  d2.png       plantuml-1.2025.10.jar                test-1.2025.10.sh
+d1.png       d3.plantuml  plantuml-1.2025.9.jar                 test-1.2025.9.output_windows_11.txt
+d2.plantuml  d3.png       test-1.2025.10.output_windows_11.txt  test-1.2025.9.sh
+
+

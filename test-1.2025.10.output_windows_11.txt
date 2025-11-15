@@ -1,0 +1,43 @@
+$ ./test-1.2025.10.sh
+Only d1:
+No diagram found
+d1.plantuml  plantuml-1.2025.10.jar                test-1.2025.10.sh
+d2.plantuml  plantuml-1.2025.9.jar                 test-1.2025.9.output_windows_11.txt
+d3.plantuml  test-1.2025.10.output_windows_11.txt  test-1.2025.9.sh
+rm: cannot remove '*.png': No such file or directory
+
+Only d2:
+No diagram found
+d1.plantuml  plantuml-1.2025.10.jar                test-1.2025.10.sh
+d2.plantuml  plantuml-1.2025.9.jar                 test-1.2025.9.output_windows_11.txt
+d3.plantuml  test-1.2025.10.output_windows_11.txt  test-1.2025.9.sh
+rm: cannot remove '*.png': No such file or directory
+
+All:
+d1.plantuml  d3.plantuml             test-1.2025.10.output_windows_11.txt  test-1.2025.9.sh
+d1.png       plantuml-1.2025.10.jar  test-1.2025.10.sh
+d2.plantuml  plantuml-1.2025.9.jar   test-1.2025.9.output_windows_11.txt
+
+All twice:
+java.io.FileNotFoundException: C:\FKApps\repo\plantuml-bug\d1.png (Det g▒r inte att komma ▒t filen eftersom den
+anv▒nds av en annan process)
+        at java.base/java.io.FileOutputStream.open0(Native Method)
+        at java.base/java.io.FileOutputStream.open(FileOutputStream.java:289)
+        at java.base/java.io.FileOutputStream.<init>(FileOutputStream.java:230)
+        at java.base/java.io.FileOutputStream.<init>(FileOutputStream.java:179)
+        at net.sourceforge.plantuml.security.SFile.createBufferedOutputStream(SFile.java:445)
+        at net.sourceforge.plantuml.PSystemUtils.exportDiagramsSequence(PSystemUtils.java:152)
+        at net.sourceforge.plantuml.PSystemUtils.exportDiagrams(PSystemUtils.java:91)
+        at net.sourceforge.plantuml.SourceFileReaderAbstract.getGeneratedImages(SourceFileReaderAbstract.java:197)
+        at net.sourceforge.plantuml.Run.manageFileInternal(Run.java:344)
+        at net.sourceforge.plantuml.Run.lambda$processInputsInParallel$12(Run.java:301)
+        at net.sourceforge.plantuml.Run.lambda$processInParallel$14(Run.java:317)
+        at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+        at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+        at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+        at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+        at java.base/java.lang.Thread.run(Thread.java:1583)
+d1.plantuml  d3.plantuml             test-1.2025.10.output_windows_11.txt  test-1.2025.9.sh
+d1.png       plantuml-1.2025.10.jar  test-1.2025.10.sh
+d2.plantuml  plantuml-1.2025.9.jar   test-1.2025.9.output_windows_11.txt
+

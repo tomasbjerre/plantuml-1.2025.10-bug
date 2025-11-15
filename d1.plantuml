@@ -1,0 +1,5 @@
+@startuml d1
+mainframe d1
+activate a
+deactivate a
+@enduml
